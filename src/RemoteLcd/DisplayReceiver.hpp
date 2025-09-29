@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Arduino.h"
-#include "Commnads.hpp"
+#include "Commands.hpp"
 #include "display/CharacterDisplayInterface.h"
 
 namespace RemoteLcd

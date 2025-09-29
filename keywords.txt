@@ -1,0 +1,15 @@
+Blinker KEYWORD1
+
+setPatternIdle KEYWORD2
+setPatternTrigger1 KEYWORD2
+setPatternTrigger2 KEYWORD2
+
+setColorIdle KEYWORD2
+setColorTrigger1 KEYWORD2
+setColorTrigger2 KEYWORD2
+
+setTrigger1 KEYWORD2
+setTrigger2 KEYWORD2
+
+getRGB KEYWORD2
+update KEYWORD2

@@ -7,16 +7,17 @@
 #include <input/KeyboardAdapter.h>
 #include <renderer/CharacterDisplayRenderer.h>
 
-#include "StreamDisplayTransmitter.hpp"
-#include "StreamDisplayAdapter.hpp"
-#include "StreamInputAdapter.hpp"
-#include "StreamDisplayReceiver.hpp"
+#include <RemoteLcd.hpp>
 
 #define LCD_ROWS 2
 #define LCD_COLS 16
 
-StreamDisplayTransmitter st(&Serial);
-StreamDisplayAdapter sa(&st);
+//DisplayTransmitter st(&Serial);
+//RemoteLcdAdapter sa(&st);
+
+
+
+
 
 extern MenuScreen *settingsScreen;
 extern MenuScreen *settings2Screen;
@@ -52,10 +53,12 @@ MENU_SCREEN(settings2Screen, settings2Items,
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 
 LiquidCrystalAdapter di = LiquidCrystalAdapter(&lcd, LCD_COLS, LCD_ROWS);
-StreamDisplayReceiver dr(&di, &Serial);
-// CharacterDisplayRenderer renderer(new LiquidCrystalAdapter(&lcd, LCD_COLS, LCD_ROWS), LCD_COLS, LCD_ROWS);
+//RemoteLcdReceiver dr(&di, &Serial);
+CharacterDisplayRenderer renderer(new LiquidCrystalAdapter(&lcd, LCD_COLS, LCD_ROWS), LCD_COLS, LCD_ROWS);
 // CharacterDisplayRenderer renderer(&sa, LCD_COLS, LCD_ROWS);
-// LcdMenu menu(renderer);
+LcdMenu menu(renderer);
+
+RemoteLcd::InputAadpter inputAdapter(&menu, &Serial);
 
 // right 0, left 480, up 131, down 307, select 722
 
