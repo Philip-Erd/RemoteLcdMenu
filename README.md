@@ -19,7 +19,7 @@ I wrote a simple emulator that can be used to connect to a transmitter via WebSe
 4. Play around with the up and down buttons
 
 
-[!NOTE]
-If you want to flash your Arduino again you need to refresh the page to disconnect the serial connection.
+>[!NOTE]
+>If you want to flash your Arduino again you need to refresh the page to disconnect the serial connection.
 
 
