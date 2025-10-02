@@ -1,5 +1,0 @@
-#include "RemoteLcd/DisplayAdapter.hpp"
-#include "RemoteLcd/DisplayTransmitter.hpp"
-#include "RemoteLcd/DisplayReceiver.hpp"
-#include "RemoteLcd/InputTransmitter.hpp"
-#include "RemoteLcd/InputAdapter.hpp"
