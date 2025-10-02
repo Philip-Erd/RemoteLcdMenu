@@ -1,47 +1,47 @@
 #include "DisplayAdapter.hpp"
 
-void RemoteLcd::DisplayAdpter::begin() override
+void RemoteLcd::DisplayAdapter::begin()
 {
 }
 
-void RemoteLcd::DisplayAdpter::createChar(uint8_t id, uint8_t *c) override
+void RemoteLcd::DisplayAdapter::createChar(uint8_t id, uint8_t *c)
 {
     transmitter->createCustomCharacter(id, c);
 }
 
-void RemoteLcd::DisplayAdpter::clear() override { transmitter->clear(); }
+void RemoteLcd::DisplayAdapter::clear() { transmitter->clear(); }
 
-void RemoteLcd::DisplayAdpter::setBacklight(bool enabled) override {}
+void RemoteLcd::DisplayAdapter::setBacklight(bool enabled) {}
 
-void RemoteLcd::DisplayAdpter::setCursor(uint8_t col, uint8_t row) override
+void RemoteLcd::DisplayAdapter::setCursor(uint8_t col, uint8_t row)
 {
     transmitter->setCursor(col, row);
 }
 
-void RemoteLcd::DisplayAdpter::draw(const char *text) override
+void RemoteLcd::DisplayAdapter::draw(const char *text)
 {
     transmitter->writeText(text);
 }
 
-void RemoteLcd::DisplayAdpter::draw(uint8_t byte) override
+void RemoteLcd::DisplayAdapter::draw(uint8_t byte)
 {
     transmitter->writeCharacter(byte);
 }
 
-void RemoteLcd::DisplayAdpter::drawBlinker() override
+void RemoteLcd::DisplayAdapter::drawBlinker()
 {
     transmitter->setBlink(true);
 }
 
-void RemoteLcd::DisplayAdpter::clearBlinker() override
+void RemoteLcd::DisplayAdapter::clearBlinker()
 {
     transmitter->setBlink(false);
 }
 
-void RemoteLcd::DisplayAdpter::show() override
+void RemoteLcd::DisplayAdapter::show()
 {
 }
 
-void RemoteLcd::DisplayAdpter::hide() override
+void RemoteLcd::DisplayAdapter::hide()
 {
 }
