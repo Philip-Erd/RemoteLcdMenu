@@ -5,6 +5,20 @@ This Arduino library lets you transmit Character LCD Data over Serial or other S
 A lot of projects require some configuration that should be changed after they got flashed. Some simple Menus and a few buttons are usually enough and LcdMenu delivers on that. But placing an LCD and buttons in every project is not always possible (size, cost, etc.), so i wanted to channel the display control commands and the button feedback over a serial interface, to be able to have a single device with an LCD and buttons and connect it to the project via serial. This also makes it possible to have an emulated LCD on a PC to configure it directly after programming.
 
 ## installation
-Clone this git repo or download and extract the zip in your [Arduino libraries folder](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/#manual-installation). 
+Clone this git repo or download and extract the zip in your [Arduino libraries folder](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/#manual-installation).
+
+## emulator
+
+I wrote a simple emulator that can be used to connect to a transmitter via WebSerial. It is available [here](https://philip-erd.github.io/RemoteLcdMenu/). Make sure to use a browser with WebSerial support (Chrome, Edge, not Firefox). To close the connection simply refresh the page.
+
+## Getting Started
+
+1. Install the library.
+2. Flash the `BasicTransmitter` example to your Arduino.
+3. Open the [emulator](https://philip-erd.github.io/RemoteLcdMenu/) and open the port your Arduino is connected to.
+4. Play around with the up and down buttons
+
+[!NOTE]
+If you want to flash your Arduino again you need to refresh the page to disconnect the serial connection.
 
 
