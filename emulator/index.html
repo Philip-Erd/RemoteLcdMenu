@@ -9,7 +9,10 @@
 <body>
     <h1>Lcd</h1>
 
+    <label for="baudRate">baud rate:</label>
+    <input type="number" id="baudRate" value="9600">
     <button id="button_open_port">open serial port</button>
+
 
     <div id="lcd"></div>
     <div id="buttons">
@@ -34,7 +37,8 @@
 
         document.getElementById("button_open_port").onclick = () => {
             navigator.serial.requestPort().then(async (port) => {
-                await port.open({ baudRate: 9600 });
+                let baudRate = document.getElementById("baudRate").value
+                await port.open({ baudRate: baudRate });
                 const reader = port.readable.getReader();
                 writer = port.writable.getWriter()
 
@@ -48,8 +52,7 @@
                         reader.releaseLock();
                         break;
                     }
-                    // value is a Uint8Array.
-                    //console.log(value);
+
                     value.forEach(data => {
                         lcd_controller.process(data)
                     });
@@ -69,18 +72,6 @@
         document.getElementById("button_right").onclick = () => { writer ? writer.write(new Uint8Array([130])) : console.warn("writer not available") }
         document.getElementById("button_left").onclick = () => { writer ? writer.write(new Uint8Array([131])) : console.warn("writer not available") }
 
-        document.addEventListener("keypress", (e) => {
-            e.preventDefault();
-            console.log("keypress: " + e.code)
-            switch (e.code) {
-                case "KeyW":
-                    writer ? writer.write(new Uint8Array([128])) : console.warn("writer not available")
-                    break;
-                case "KeyS":
-                    writer ? writer.write(new Uint8Array([129])) : console.warn("writer not available")
-                    break;
-            }
-        })
 
 
 
