@@ -1,15 +1,33 @@
-Blinker KEYWORD1
+InputTransmitter KEYWORD1
+InputAdapter KEYWORD1
+DisplayTransmitter KEYWORD1
+DisplayReceiver KEYWORD1
+DisplayAdapter KEYWORD1
+RemoteLcd KEYWORD1
+Commands KEYWORD1
 
-setPatternIdle KEYWORD2
-setPatternTrigger1 KEYWORD2
-setPatternTrigger2 KEYWORD2
 
-setColorIdle KEYWORD2
-setColorTrigger1 KEYWORD2
-setColorTrigger2 KEYWORD2
+select KEYWORD2
+back KEYWORD2
+up KEYWORD2
+down KEYWORD2
+left KEYWORD2
+right KEYWORD2
 
-setTrigger1 KEYWORD2
-setTrigger2 KEYWORD2
+observe KEYWORD2
 
-getRGB KEYWORD2
+clear KEYWORD2
+writeText KEYWORD2
+writeCharacter KEYWORD2
+setCursor KEYWORD2
+createCustomCharacter KEYWORD2
+setBlink KEYWORD2
+
 update KEYWORD2
+
+CLEAR_DISPLAY LITERAL1
+WRITE_TEXT LITERAL1
+WRITE_CHARACTER LITERAL1
+SET_CURSOR LITERAL1
+CREATE_CUSTOM_CHARACTER LITERAL1
+SET_BLINK LITERAL1
