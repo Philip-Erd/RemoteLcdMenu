@@ -18,6 +18,7 @@ I wrote a simple emulator that can be used to connect to a transmitter via WebSe
 3. Open the [emulator](https://philip-erd.github.io/RemoteLcdMenu/) and open the port your Arduino is connected to.
 4. Play around with the up and down buttons
 
+
 [!NOTE]
 If you want to flash your Arduino again you need to refresh the page to disconnect the serial connection.
 
